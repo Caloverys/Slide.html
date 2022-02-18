@@ -1,0 +1,153 @@
+:root {
+  --width: 600px;
+  --height: 450px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotatein {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes rotateback {
+  from {
+    transform: rotateX(180deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+.board {
+  width: var(--width);
+  height: var(--height);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  left: calc(50% - 300px);
+  margin-top: calc(5%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+img {
+  width: var(--width);
+  height: var(--height);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.buttons {
+  border-radius: 50%;
+  width: 32.5px;
+  height: 32.5px;
+  background-color: lightgrey;
+  border: 3px solid grey;
+  margin: 5px;
+  margin-top: 30px !important;
+  position: relative;
+}
+
+.buttons:hover {
+  opacity: 0.5;
+}
+
+.opacity {
+  opacity: 0.3;
+}
+
+.rotateIn {
+  animation-name: rotatein;
+  animation-duration: 1.5s;
+}
+
+.rotateBack {
+  animation-name: rotateback;
+  animation-duration: 1.5s;
+}
+
+.fadein {
+  animation-name: fadein;
+  animation-duration: 2s;
+  opacity: 0.3;
+}
+
+.fadeout {
+  animation-name: fadeout;
+  animation-duration: 2s;
+  opacity: 1;
+}
+
+.flip {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: max-content;
+  text-align: center;
+  margin-top: 750px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.5em;
+  display: table;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  bottom: calc(var(--height)/5);
+}
+
+.background {
+  font-size: 2em;
+  line-height: 450px;
+}
+
+.backgroundtext {
+  width: calc(var(--width) - 10px);
+  height: max-content;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  position: relative;
+  bottom: calc(var(--height));
+}
+
+.message {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(30, 30, 30, 0.9);
+  float: left;
+  position: absolute;
+  top: 90%;
+  left: 2%;
+  color: whitesmoke;
+  text-align: center;
+  padding: 3px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
